@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "bin": {
-    "brain-games":  "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js"
   },
   "description": "project 1",
   "main": "index.js",
@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/svyatoslavxx/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/svyatoslavxx/frontend-project-lvl1#readme"
+  "homepage": "https://github.com/svyatoslavxx/frontend-project-lvl1#readme",
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.5.3",
+    "readline-sync": "^1.4.10"
+  }
 }
