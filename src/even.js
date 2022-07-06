@@ -1,5 +1,6 @@
 import readlineSync from 'readline-sync';
 
+console.log('Welcome to the Brain Games!');
 const even = () => {
   let counter = 0;
   const respondentName = readlineSync.question('May i have your name? ');
