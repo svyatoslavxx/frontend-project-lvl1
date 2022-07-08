@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/svyatoslavxx/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/svyatoslavxx/frontend-project-lvl1/actions)
 [![Maintainability](https://api.codeclimate.com/v1/badges/81e72d6b1378c17a736d/maintainability)](https://codeclimate.com/github/svyatoslavxx/frontend-project-lvl1/maintainability)
 
-<h1><b>Проект #1.</b></h1>
+<h1><b>Проект #1</b></h1>
 Создание проекта было направлено на отработку на практике настройки окружения, настройки линтера, а также работы в терминале c git, публикации и оформлении README файла. 
 
 Проект прошел все тесты Hexlet и проверку наставником.
