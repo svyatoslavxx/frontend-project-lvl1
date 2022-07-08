@@ -9,10 +9,11 @@ const ariphmeticProgression = () => {
     const step = getRandomNum(2, 10);
     const hiddenElemIndex = getRandomNum(0, progressionLength);
     const numbersForQuestion = [];
-    for (let i = 0; i < progressionLength + 1; i += 1) {
-      numbersForQuestion.push(firstNumberInProgression + step);
+    numbersForQuestion.push(firstNumberInProgression + step);
+    for (let i = 1; i < progressionLength + 1; i += 1) {
+      numbersForQuestion.push(numbersForQuestion[i - 1] + step);
     }
-    const correctHiddenElem = numbersForQuestion[hiddenElemIndex];
+    const correctHiddenElem = numbersForQuestion[hiddenElemIndex].toString();
     const question = [...numbersForQuestion];
     question[hiddenElemIndex] = '..';
     const questionWithHiddenElem = question.join(' ');
