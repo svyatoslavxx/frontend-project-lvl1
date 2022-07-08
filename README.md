@@ -54,5 +54,5 @@ npm install <название игры>. Например npm install brain-even
 <h3><b>Запуск</b></h3>
 
 ```
-<название игры>. Например brain-even
+make <название игры>. Например make brain-even.
 ```
