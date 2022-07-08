@@ -3,8 +3,8 @@ import getRandomNum from './getRandomNum.js';
 
 const ariphmeticProgression = () => {
   const taskDescription = 'What number is missing in the progression?';
+  const progressionLength = getRandomNum(5, 9);
   const progression = () => {
-    const progressionLength = getRandomNum(5, 10);
     const firstNumberInProgression = getRandomNum(0, 100);
     const step = getRandomNum(2, 10);
     const hiddenElemIndex = getRandomNum(0, progressionLength);
