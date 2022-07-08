@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync';
 
 const baseLogic = (description, task) => {
   console.log('Welcome to the Brain Games!');
-  const userName = readlineSync.question('May i have your name? ');
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(`${description}`);
   let correctAnswerCount = 0;
@@ -19,7 +19,7 @@ const baseLogic = (description, task) => {
       return console.log(`'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
     }
   }
-  return console.log(`Congratulations, ${userName}`);
+  return console.log(`Congratulations, ${userName}!`);
 };
 
 export default baseLogic;
