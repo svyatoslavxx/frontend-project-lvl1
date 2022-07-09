@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import primeBody from '../../src/prime.js';
+import brainPrime from '../../src/prime.js';
 
-primeBody();
+brainPrime();
