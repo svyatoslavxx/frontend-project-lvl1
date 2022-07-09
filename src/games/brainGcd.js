@@ -1,5 +1,5 @@
-import baseLogic from './index.js';
-import greatestdivisor from './greatestdivisor.js';
+import baseLogic from '../index.js';
+import greatestdivisor from '../greatestdivisor.js';
 
 const greatestCommonDivisor = () => {
   const taskDescription = 'Find the greatest common divisor of given numbers.';

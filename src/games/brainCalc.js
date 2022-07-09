@@ -1,4 +1,4 @@
-import baseLogic from './index.js';
+import baseLogic from '../index.js';
 
 const calc = () => {
   const taskDescription = 'What is the result of the expression?';

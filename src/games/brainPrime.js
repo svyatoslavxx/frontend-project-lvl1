@@ -1,6 +1,6 @@
-import isPrime from './checkifPrime.js';
-import baseLogic from './index.js';
-import getRandomNum from './getRandomNum.js';
+import isPrime from '../checkifPrime.js';
+import baseLogic from '../index.js';
+import getRandomNum from '../getRandomNum.js';
 
 const brainPrime = () => {
   const taskDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';

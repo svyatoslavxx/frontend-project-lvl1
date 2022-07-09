@@ -1,5 +1,5 @@
-import baseLogic from './index.js';
-import getRandomNum from './getRandomNum.js';
+import baseLogic from '../index.js';
+import getRandomNum from '../getRandomNum.js';
 
 const ariphmeticProgression = () => {
   const taskDescription = 'What number is missing in the progression?';
