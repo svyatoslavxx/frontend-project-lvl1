@@ -8,9 +8,8 @@ const checkInputAndGiveBaseLogic = (description, gameLogic) => {
   let correctAnswerCount = 0;
   const maximumOfCorrectAnswers = 3;
   while (correctAnswerCount < maximumOfCorrectAnswers) {
-    const questionResult = gameLogic();
-    const correctAnswer = questionResult[1];
-    console.log(`Question: ${questionResult[0]}`);
+    const [questionResult, correctAnswer] = gameLogic();
+    console.log(`Question: ${questionResult}`);
     const answer = readlineSync.question('Your answer: ');
     if (answer === correctAnswer) {
       correctAnswerCount += 1;
