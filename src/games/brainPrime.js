@@ -6,9 +6,7 @@ const getPrimeStatus = () => {
   const taskDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
   const checkIfPrimeForBaselogic = () => {
     const numberForQuestion = getRandomNum(0, 100);
-    let correctAnswer;
-    if (checkIfPrime(numberForQuestion) === true) correctAnswer = 'yes';
-    if (checkIfPrime(numberForQuestion) === false) correctAnswer = 'no';
+    const correctAnswer = checkIfPrime(numberForQuestion) ? 'yes' : 'no';
     const result = [numberForQuestion, correctAnswer];
     return result;
   };
