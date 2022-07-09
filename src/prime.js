@@ -2,7 +2,7 @@ import isPrime from './checkifPrime.js';
 import baseLogic from './index.js';
 import getRandomNum from './getRandomNum.js';
 
-const primeBody = () => {
+const brainPrime = () => {
   const taskDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
   const prime = () => {
     const numberForQuestion = getRandomNum(0, 100);
@@ -15,4 +15,4 @@ const primeBody = () => {
   baseLogic(taskDescription, prime);
 };
 
-export default primeBody;
+export default brainPrime;
