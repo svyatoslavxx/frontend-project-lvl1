@@ -1,18 +1,18 @@
-import isPrime from '../checkifPrime.js';
-import baseLogic from '../index.js';
 import getRandomNum from '../getRandomNum.js';
+import checkIfPrime from '../checkifPrime.js';
+import checkInputAndGiveBaseLogic from '../index.js';
 
-const brainPrime = () => {
+const getPrimeStatus = () => {
   const taskDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  const prime = () => {
+  const checkIfPrimeForBaselogic = () => {
     const numberForQuestion = getRandomNum(0, 100);
     let correctAnswer;
-    if (isPrime(numberForQuestion) === true) correctAnswer = 'yes';
-    if (isPrime(numberForQuestion) === false) correctAnswer = 'no';
+    if (checkIfPrime(numberForQuestion) === true) correctAnswer = 'yes';
+    if (checkIfPrime(numberForQuestion) === false) correctAnswer = 'no';
     const result = [numberForQuestion, correctAnswer];
     return result;
   };
-  baseLogic(taskDescription, prime);
+  checkInputAndGiveBaseLogic(taskDescription, checkIfPrimeForBaselogic);
 };
 
-export default brainPrime;
+export default getPrimeStatus;

@@ -1,9 +1,9 @@
-import baseLogic from '../index.js';
 import greatestdivisor from '../greatestdivisor.js';
+import checkInputAndGiveBaseLogic from '../index.js';
 
-const greatestCommonDivisor = () => {
+const findGreatestCommonDivisor = () => {
   const taskDescription = 'Find the greatest common divisor of given numbers.';
-  const gcd = () => {
+  const getGcdForBaseLogic = () => {
     const firstNum = Math.round(Math.random() * 100);
     const secondNum = Math.round(Math.random() * 100);
     let resultOfGcd = greatestdivisor(firstNum, secondNum);
@@ -11,7 +11,7 @@ const greatestCommonDivisor = () => {
     resultOfGcd = resultOfGcd.toString();
     return [question, resultOfGcd];
   };
-  baseLogic(taskDescription, gcd);
+  checkInputAndGiveBaseLogic(taskDescription, getGcdForBaseLogic);
 };
 
-export default greatestCommonDivisor;
+export default findGreatestCommonDivisor;

@@ -1,8 +1,8 @@
-import baseLogic from '../index.js';
+import checkInputAndGiveBaseLogic from '../index.js';
 
-const calc = () => {
+const calculateNumbers = () => {
   const taskDescription = 'What is the result of the expression?';
-  const calcForBaseLogic = () => {
+  const calculateForBaseLogic = () => {
     const operatorList = ['+', '-', '*'];
     const operator = operatorList[Math.round(Math.random(0, 2))];
     const firstOperand = Math.round(Math.random() * 100);
@@ -22,7 +22,7 @@ const calc = () => {
     return [question, result];
   };
 
-  baseLogic(taskDescription, calcForBaseLogic);
+  checkInputAndGiveBaseLogic(taskDescription, calculateForBaseLogic);
 };
 
-export default calc;
+export default calculateNumbers;

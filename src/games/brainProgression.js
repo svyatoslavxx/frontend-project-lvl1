@@ -1,10 +1,10 @@
-import baseLogic from '../index.js';
 import getRandomNum from '../getRandomNum.js';
+import checkInputAndGiveBaseLogic from '../index.js';
 
-const ariphmeticProgression = () => {
+const getProgressionOfNumbers = () => {
   const taskDescription = 'What number is missing in the progression?';
   const progressionLength = getRandomNum(5, 9);
-  const progression = () => {
+  const createProgression = () => {
     const firstNumberInProgression = getRandomNum(0, 100);
     const step = getRandomNum(2, 10);
     const hiddenElemIndex = getRandomNum(0, progressionLength);
@@ -19,7 +19,7 @@ const ariphmeticProgression = () => {
     const questionWithHiddenElem = question.join(' ');
     return [questionWithHiddenElem, correctHiddenElem];
   };
-  baseLogic(taskDescription, progression);
+  checkInputAndGiveBaseLogic(taskDescription, createProgression);
 };
 
-export default ariphmeticProgression;
+export default getProgressionOfNumbers;
