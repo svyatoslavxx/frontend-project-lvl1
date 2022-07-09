@@ -2,7 +2,7 @@ import getRandomNum from '../getRandomNum.js';
 import checkInputAndGiveBaseLogic from '../index.js';
 
 const getProgressionOfNumbers = () => {
-  const taskDescription = 'What number is missing in the progression?';
+  const gameDescription = 'What number is missing in the progression?';
   const progressionLength = getRandomNum(5, 9);
   const createProgression = () => {
     const firstNumberInProgression = getRandomNum(0, 100);
@@ -19,7 +19,7 @@ const getProgressionOfNumbers = () => {
     const questionWithHiddenElem = question.join(' ');
     return [questionWithHiddenElem, correctHiddenElem];
   };
-  checkInputAndGiveBaseLogic(taskDescription, createProgression);
+  checkInputAndGiveBaseLogic(gameDescription, createProgression);
 };
 
 export default getProgressionOfNumbers;

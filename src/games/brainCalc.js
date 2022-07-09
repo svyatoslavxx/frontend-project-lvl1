@@ -2,7 +2,7 @@ import checkInputAndGiveBaseLogic from '../index.js';
 import getRandomNum from '../getRandomNum.js';
 
 const calculateNumbers = () => {
-  const taskDescription = 'What is the result of the expression?';
+  const gameDescription = 'What is the result of the expression?';
   const calculateForBaseLogic = () => {
     const operatorList = ['+', '-', '*'];
     const operator = operatorList[getRandomNum(0, 2)];
@@ -26,7 +26,7 @@ const calculateNumbers = () => {
     return [question, result];
   };
 
-  checkInputAndGiveBaseLogic(taskDescription, calculateForBaseLogic);
+  checkInputAndGiveBaseLogic(gameDescription, calculateForBaseLogic);
 };
 
 export default calculateNumbers;
