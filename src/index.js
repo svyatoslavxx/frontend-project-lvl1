@@ -6,7 +6,8 @@ const baseLogic = (description, task) => {
   console.log(`Hello, ${userName}!`);
   console.log(`${description}`);
   let correctAnswerCount = 0;
-  while (correctAnswerCount < 3) {
+  const maximumOfCorrectAnswers = 3;
+  while (correctAnswerCount < maximumOfCorrectAnswers) {
     const questionResult = task();
     const correctAnswer = questionResult[1];
     console.log(`Question: ${questionResult[0]}`);
