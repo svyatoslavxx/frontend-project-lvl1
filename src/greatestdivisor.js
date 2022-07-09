@@ -1,8 +1,8 @@
-const findGreatestdivisor = (firstNumber, secondNumber) => {
+const findGreatestDivisor = (firstNumber, secondNumber) => {
   if (!secondNumber) {
     return firstNumber;
   }
-  return findGreatestdivisor(secondNumber, firstNumber % secondNumber);
+  return findGreatestDivisor(secondNumber, firstNumber % secondNumber);
 };
 
-export default findGreatestdivisor;
+export default findGreatestDivisor;
