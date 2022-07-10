@@ -11,11 +11,11 @@ const createProgression = () => {
   for (let i = 1; i < progressionLength + 1; i += 1) {
     numbersForQuestion.push(numbersForQuestion[i - 1] + step);
   }
-  const correctHiddenElement = numbersForQuestion[hiddenElementIndex].toString();
+  const HiddenElement = numbersForQuestion[hiddenElementIndex].toString();
   const question = [...numbersForQuestion];
   question[hiddenElementIndex] = '..';
   const questionWithHiddenElement = question.join(' ');
-  return [questionWithHiddenElement, correctHiddenElement];
+  return [questionWithHiddenElement, HiddenElement];
 };
 const startBrainProgressionGame = () => {
   const gameDescription = 'What number is missing in the progression?';
