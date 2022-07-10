@@ -2,15 +2,15 @@ import getRandomNumber from '../getRandomNumber.js';
 import checkIfPrime from '../checkifPrime.js';
 import startGame from '../index.js';
 
+const isNumberPrime = () => {
+  const numberForQuestion = getRandomNumber(0, 100);
+  const correctAnswer = checkIfPrime(numberForQuestion) ? 'yes' : 'no';
+  const result = [numberForQuestion, correctAnswer];
+  return result;
+};
 const startBrainPrimeGame = () => {
-  const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  const checkIfPrimeForBaselogic = () => {
-    const numberForQuestion = getRandomNumber(0, 100);
-    const correctAnswer = checkIfPrime(numberForQuestion) ? 'yes' : 'no';
-    const result = [numberForQuestion, correctAnswer];
-    return result;
-  };
-  startGame(gameDescription, checkIfPrimeForBaselogic);
+  const taskDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
+  startGame(taskDescription, isNumberPrime);
 };
 
 export default startBrainPrimeGame;
