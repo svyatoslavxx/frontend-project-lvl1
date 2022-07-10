@@ -1,5 +1,5 @@
 import checkInputAndGiveBaseLogic from '../index.js';
-import getRandomNum from '../getRandomNum.js';
+import getRandomNumber from '../getRandomNumber.js';
 
 const performCalculation = (firstOperand, operator, secondOperand) => {
   switch (operator) {
@@ -14,9 +14,9 @@ const performCalculation = (firstOperand, operator, secondOperand) => {
 };
 const createExpression = () => {
   const operatorList = ['+', '-', '*'];
-  const operator = operatorList[getRandomNum(0, 2)];
-  const firstOperand = getRandomNum(0, 100);
-  const secondOperand = getRandomNum(0, 100);
+  const operator = operatorList[getRandomNumber(0, 2)];
+  const firstOperand = getRandomNumber(0, 100);
+  const secondOperand = getRandomNumber(0, 100);
   const question = `Question: ${firstOperand} ${operator} ${secondOperand}`;
   const correctAnswer = performCalculation(firstOperand, operator, secondOperand);
   return [question, correctAnswer];

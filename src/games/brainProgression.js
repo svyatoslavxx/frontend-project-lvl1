@@ -1,13 +1,13 @@
-import getRandomNum from '../getRandomNum.js';
+import getRandomNumber from '../getRandomNumber.js';
 import checkInputAndGiveBaseLogic from '../index.js';
 
 const startBrainProgressionGame = () => {
   const gameDescription = 'What number is missing in the progression?';
-  const progressionLength = getRandomNum(5, 9);
+  const progressionLength = getRandomNumber(5, 9);
   const createProgression = () => {
-    const firstNumberInProgression = getRandomNum(0, 100);
-    const step = getRandomNum(2, 10);
-    const hiddenElemIndex = getRandomNum(0, progressionLength);
+    const firstNumberInProgression = getRandomNumber(0, 100);
+    const step = getRandomNumber(2, 10);
+    const hiddenElemIndex = getRandomNumber(0, progressionLength);
     const numbersForQuestion = [];
     numbersForQuestion.push(firstNumberInProgression + step);
     for (let i = 1; i < progressionLength + 1; i += 1) {
