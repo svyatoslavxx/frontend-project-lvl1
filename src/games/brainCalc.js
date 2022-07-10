@@ -1,5 +1,5 @@
-import checkInputAndGiveBaseLogic from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
+import startGame from '../index.js';
 
 const performCalculation = (firstOperand, operator, secondOperand) => {
   switch (operator) {
@@ -23,7 +23,7 @@ const createExpression = () => {
 };
 const startBrainCalcGame = () => {
   const taskDescription = 'What is the result of the expression?';
-  checkInputAndGiveBaseLogic(taskDescription, createExpression);
+  startGame(taskDescription, createExpression);
 };
 
 export default startBrainCalcGame;

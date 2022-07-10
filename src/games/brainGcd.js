@@ -1,5 +1,5 @@
 import greatestdivisor from '../greatestdivisor.js';
-import checkInputAndGiveBaseLogic from '../index.js';
+import startGame from '../index.js';
 
 const startBrainGcdGame = () => {
   const gameDescription = 'Find the greatest common divisor of given numbers.';
@@ -11,7 +11,7 @@ const startBrainGcdGame = () => {
     resultOfGcd = resultOfGcd.toString();
     return [question, resultOfGcd];
   };
-  checkInputAndGiveBaseLogic(gameDescription, getGcdForBaseLogic);
+  startGame(gameDescription, getGcdForBaseLogic);
 };
 
 export default startBrainGcdGame;

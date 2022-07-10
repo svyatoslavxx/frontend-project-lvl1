@@ -1,6 +1,6 @@
 import getRandomNumber from '../getRandomNumber.js';
 import checkIfPrime from '../checkifPrime.js';
-import checkInputAndGiveBaseLogic from '../index.js';
+import startGame from '../index.js';
 
 const startBrainPrimeGame = () => {
   const gameDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
@@ -10,7 +10,7 @@ const startBrainPrimeGame = () => {
     const result = [numberForQuestion, correctAnswer];
     return result;
   };
-  checkInputAndGiveBaseLogic(gameDescription, checkIfPrimeForBaselogic);
+  startGame(gameDescription, checkIfPrimeForBaselogic);
 };
 
 export default startBrainPrimeGame;

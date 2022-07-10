@@ -1,5 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-import checkInputAndGiveBaseLogic from '../index.js';
+import startGame from '../index.js';
 
 const startBrainProgressionGame = () => {
   const gameDescription = 'What number is missing in the progression?';
@@ -19,7 +19,7 @@ const startBrainProgressionGame = () => {
     const questionWithHiddenElem = question.join(' ');
     return [questionWithHiddenElem, correctHiddenElem];
   };
-  checkInputAndGiveBaseLogic(gameDescription, createProgression);
+  startGame(gameDescription, createProgression);
 };
 
 export default startBrainProgressionGame;
