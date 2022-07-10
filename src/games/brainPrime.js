@@ -1,5 +1,5 @@
 import getRandomNumber from '../getRandomNumber.js';
-import checkIfPrime from '../checkifPrime.js';
+import checkIfPrime from '../checkIfPrime.js';
 import startGame from '../index.js';
 
 const isNumberPrime = () => {
