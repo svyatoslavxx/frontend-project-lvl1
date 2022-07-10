@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import getEvenStatusOfNumbers from '../src/games/brainProgression.js';
+import startBrainProgressionGame from '../src/games/brainProgression.js';
 
-getEvenStatusOfNumbers();
+startBrainProgressionGame();

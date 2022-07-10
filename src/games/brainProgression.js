@@ -1,7 +1,7 @@
 import getRandomNum from '../getRandomNum.js';
 import checkInputAndGiveBaseLogic from '../index.js';
 
-const getProgressionOfNumbers = () => {
+const startBrainProgressionGame = () => {
   const gameDescription = 'What number is missing in the progression?';
   const progressionLength = getRandomNum(5, 9);
   const createProgression = () => {
@@ -22,4 +22,4 @@ const getProgressionOfNumbers = () => {
   checkInputAndGiveBaseLogic(gameDescription, createProgression);
 };
 
-export default getProgressionOfNumbers;
+export default startBrainProgressionGame;

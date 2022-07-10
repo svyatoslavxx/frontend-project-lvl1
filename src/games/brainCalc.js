@@ -1,7 +1,7 @@
 import checkInputAndGiveBaseLogic from '../index.js';
 import getRandomNum from '../getRandomNum.js';
 
-const calculateNumbers = () => {
+const startBrainCalcGame = () => {
   const gameDescription = 'What is the result of the expression?';
   const calculateForBaseLogic = () => {
     const operatorList = ['+', '-', '*'];
@@ -29,4 +29,4 @@ const calculateNumbers = () => {
   checkInputAndGiveBaseLogic(gameDescription, calculateForBaseLogic);
 };
 
-export default calculateNumbers;
+export default startBrainCalcGame;

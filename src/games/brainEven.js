@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const getEvenStatusOfNumber = () => {
+const starBrainEvenGame = () => {
   let countAnswers = 0;
   console.log('Welcome to the Brain Games!');
   const respondentName = readlineSync.question('May i have your name? ');
@@ -28,4 +28,4 @@ const getEvenStatusOfNumber = () => {
   return console.log(`Congratulations, ${respondentName}!`);
 };
 
-export default getEvenStatusOfNumber;
+export default starBrainEvenGame;
