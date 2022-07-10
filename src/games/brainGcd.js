@@ -1,6 +1,11 @@
-import findGreatestDivisor from '../findGreatestDivisor.js';
 import startGame from '../index.js';
 
+const findGreatestDivisor = (firstNumber, secondNumber) => {
+  if (!secondNumber) {
+    return firstNumber;
+  }
+  return findGreatestDivisor(secondNumber, firstNumber % secondNumber);
+};
 const startBrainGcdGame = () => {
   const gameDescription = 'Find the greatest common divisor of given numbers.';
   const getGcdForBaseLogic = () => {
