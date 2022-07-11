@@ -7,18 +7,22 @@ const startGame = (description, gameLogic) => {
   console.log(`${description}`);
   let correctAnswerCount = 0;
   const maximumOfCorrectAnswers = 3;
+
   while (correctAnswerCount < maximumOfCorrectAnswers) {
     const [questionResult, correctAnswer] = gameLogic();
     console.log(`Question: ${questionResult}`);
     const answer = readlineSync.question('Your answer: ');
+
     if (answer === correctAnswer) {
       correctAnswerCount += 1;
       console.log('Correct!');
     }
+
     if (answer !== correctAnswer) {
       return console.log(`'${answer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'\nLet's try again, ${userName}!`);
     }
   }
+
   return console.log(`Congratulations, ${userName}!`);
 };
 

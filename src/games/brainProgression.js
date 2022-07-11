@@ -8,13 +8,16 @@ const createProgression = () => {
   const hiddenElementIndex = getRandomNumber(0, progressionLength);
   const numbersForQuestion = [];
   numbersForQuestion.push(firstNumberInProgression + step);
+
   for (let i = 1; i < progressionLength + 1; i += 1) {
     numbersForQuestion.push(numbersForQuestion[i - 1] + step);
   }
+
   const HiddenElement = numbersForQuestion[hiddenElementIndex].toString();
   const question = [...numbersForQuestion];
   question[hiddenElementIndex] = '..';
   const questionWithHiddenElement = question.join(' ');
+
   return [questionWithHiddenElement, HiddenElement];
 };
 const startBrainProgressionGame = () => {

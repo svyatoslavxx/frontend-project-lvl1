@@ -12,6 +12,7 @@ const performCalculation = (firstOperand, operator, secondOperand) => {
     default: return Error('Error');
   }
 };
+
 const createExpression = () => {
   const operatorList = ['+', '-', '*'];
   const operator = operatorList[getRandomNumber(0, 2)];
@@ -19,8 +20,10 @@ const createExpression = () => {
   const secondOperand = getRandomNumber(0, 100);
   const question = `Question: ${firstOperand} ${operator} ${secondOperand}`;
   const correctAnswer = performCalculation(firstOperand, operator, secondOperand);
+
   return [question, correctAnswer];
 };
+
 const startBrainCalcGame = () => {
   const taskDescription = 'What is the result of the expression?';
   startGame(taskDescription, createExpression);
