@@ -1,15 +1,18 @@
 import getRandomNumber from '../getRandomNumber.js';
-import checkIfPrime from '../checkIfPrime.js';
 import startGame from '../index.js';
 
-const isNumberPrime = () => {
-  const numberForQuestion = getRandomNumber(0, 100);
-  const correctAnswer = checkIfPrime(numberForQuestion) ? 'yes' : 'no';
+const isNumberPrime = (number) => {
+  const firstPrimeNumber = 2;
+  for (let i = firstPrimeNumber; i < number; i += 1) if (number % i === 0) return false;
+  return number >= firstPrimeNumber;
+};
+
+const startBrainPrimeGame = () => {
+  const numberForQuestion = getRandomNumber(1, 100);
+  const correctAnswer = isNumberPrime(numberForQuestion) ? 'yes' : 'no';
   return [numberForQuestion, correctAnswer];
 };
-const startBrainPrimeGame = () => {
-  const taskDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
-  startGame(taskDescription, isNumberPrime);
-};
+
+startGame('Answer "yes" if given number is prime. Otherwise answer "no"', startBrainPrimeGame);
 
 export default startBrainPrimeGame;
