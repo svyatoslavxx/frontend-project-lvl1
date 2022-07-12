@@ -5,7 +5,7 @@ const getEvenness = (number) => number % 2 === 0;
 
 const createQuestion = () => {
   const number = getRandomNumber(1, 100);
-  const question = `Question: ${number}`;
+  const question = `${number}`;
   const correctAnswer = getEvenness(number) ? 'yes' : 'no';
 
   return [question, correctAnswer];

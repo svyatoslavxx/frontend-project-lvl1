@@ -1,20 +1,20 @@
 import readlineSync from 'readline-sync';
 
-const startGame = (description, gameLogic) => {
+const startGame = (description, createRound) => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(`${description}`);
-  let correctAnswerCount = 0;
+  let roundCount = 0;
   const maximumOfCorrectAnswers = 3;
 
-  while (correctAnswerCount < maximumOfCorrectAnswers) {
-    const [questionResult, correctAnswer] = gameLogic();
+  while (roundCount < maximumOfCorrectAnswers) {
+    const [questionResult, correctAnswer] = createRound();
     console.log(`Question: ${questionResult}`);
     const answer = readlineSync.question('Your answer: ');
 
     if (answer === correctAnswer) {
-      correctAnswerCount += 1;
+      roundCount += 1;
       console.log('Correct!');
     }
 
