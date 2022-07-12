@@ -1,12 +1,12 @@
 import startGame from '../index.js';
 import getRandomNumber from '../getRandomNumber.js';
 
-const getEvenness = (number) => number % 2 === 0;
+const isNumberEven = (number) => number % 2 === 0;
 
 const createQuestion = () => {
   const number = getRandomNumber(1, 100);
   const question = `${number}`;
-  const correctAnswer = getEvenness(number) ? 'yes' : 'no';
+  const correctAnswer = isNumberEven(number) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };
