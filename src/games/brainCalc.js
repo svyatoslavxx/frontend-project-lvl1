@@ -4,11 +4,11 @@ import startGame from '../index.js';
 const performCalculation = (firstOperand, operator, secondOperand) => {
   switch (operator) {
     case '+':
-      return (firstOperand + secondOperand).toString();
+      return (firstOperand + secondOperand);
     case '-':
-      return (firstOperand - secondOperand).toString();
+      return (firstOperand - secondOperand);
     case '*':
-      return (firstOperand * secondOperand).toString();
+      return (firstOperand * secondOperand);
     default: return Error('Error');
   }
 };
@@ -20,7 +20,7 @@ const generateQuestionAnswerPair = () => {
   const operator = operatorList[getRandomNumber(0, 2)];
   const firstOperand = getRandomNumber(0, 100);
   const secondOperand = getRandomNumber(0, 100);
-  const answer = performCalculation(firstOperand, operator, secondOperand);
+  const answer = performCalculation(firstOperand, operator, secondOperand).toString();
   const question = `${firstOperand} ${operator} ${secondOperand}`;
 
   return [question, answer];
