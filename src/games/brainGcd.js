@@ -9,17 +9,15 @@ const findGreatestDivisor = (firstNumber, secondNumber) => {
   return findGreatestDivisor(secondNumber, firstNumber % secondNumber);
 };
 
-const createQuestion = () => {
+const taskDescription = 'Find the greatest common divisor of given numbers.';
+
+const generateQuestionAnswerPair = () => {
   const firstNumber = getRandomNumber(1, 100);
   const secondNumber = getRandomNumber(1, 100);
   const question = `${firstNumber} ${secondNumber}`;
+  const answer = findGreatestDivisor(firstNumber, secondNumber).toString();
 
-  return [question, (findGreatestDivisor(firstNumber, secondNumber)).toString()];
+  return [question, answer];
 };
 
-const startBrainGcdGame = () => {
-  const gameDescription = 'Find the greatest common divisor of given numbers.';
-  startGame(gameDescription, createQuestion);
-};
-
-export default startBrainGcdGame;
+export default () => startGame(taskDescription, generateQuestionAnswerPair);

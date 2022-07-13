@@ -13,20 +13,17 @@ const performCalculation = (firstOperand, operator, secondOperand) => {
   }
 };
 
-const createExpression = () => {
+const taskDescription = 'What is the result of the expression?';
+
+const generateQuestionAnswerPair = () => {
   const operatorList = ['+', '-', '*'];
   const operator = operatorList[getRandomNumber(0, 2)];
   const firstOperand = getRandomNumber(0, 100);
   const secondOperand = getRandomNumber(0, 100);
+  const answer = performCalculation(firstOperand, operator, secondOperand);
   const question = `${firstOperand} ${operator} ${secondOperand}`;
-  const correctAnswer = performCalculation(firstOperand, operator, secondOperand);
 
-  return [question, correctAnswer];
+  return [question, answer];
 };
 
-const startBrainCalcGame = () => {
-  const taskDescription = 'What is the result of the expression?';
-  startGame(taskDescription, createExpression);
-};
-
-export default startBrainCalcGame;
+export default () => startGame(taskDescription, generateQuestionAnswerPair);

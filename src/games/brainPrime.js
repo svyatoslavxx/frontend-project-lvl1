@@ -8,13 +8,13 @@ const isNumberPrime = (number) => {
   return number >= firstPrimeNumber;
 };
 
-const startBrainPrimeGame = () => {
-  const numberForQuestion = getRandomNumber(1, 100);
-  const correctAnswer = isNumberPrime(numberForQuestion) ? 'yes' : 'no';
+const taskDescription = 'Answer "yes" if given number is prime. Otherwise answer "no"';
 
-  return [numberForQuestion, correctAnswer];
+const generateQuestionAnswerPair = () => {
+  const question = getRandomNumber(1, 100);
+  const answer = isNumberPrime(question) ? 'yes' : 'no';
+
+  return [question, answer];
 };
 
-startGame('Answer "yes" if given number is prime. Otherwise answer "no"', startBrainPrimeGame);
-
-export default startBrainPrimeGame;
+export default () => startGame(taskDescription, generateQuestionAnswerPair);

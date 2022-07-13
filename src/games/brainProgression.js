@@ -1,7 +1,9 @@
 import getRandomNumber from '../getRandomNumber.js';
 import startGame from '../index.js';
 
-const createProgression = () => {
+const taskDescription = 'What number is missing in the progression?';
+
+const generateQuestionAnswerPair = () => {
   const firstNumberInProgression = getRandomNumber(0, 100);
   const step = getRandomNumber(2, 10);
   const progressionLength = getRandomNumber(5, 9);
@@ -20,9 +22,5 @@ const createProgression = () => {
 
   return [questionWithHiddenElement, HiddenElement];
 };
-const startBrainProgressionGame = () => {
-  const gameDescription = 'What number is missing in the progression?';
-  startGame(gameDescription, createProgression);
-};
 
-export default startBrainProgressionGame;
+export default () => startGame(taskDescription, generateQuestionAnswerPair);
