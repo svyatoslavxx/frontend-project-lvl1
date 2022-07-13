@@ -16,8 +16,8 @@ const performCalculation = (firstOperand, operator, secondOperand) => {
 const taskDescription = 'What is the result of the expression?';
 
 const generateQuestionAnswerPair = () => {
-  const operatorList = ['+', '-', '*'];
-  const operator = operatorList[getRandomNumber(0, 2)];
+  const operatorsList = ['+', '-', '*'];
+  const operator = operatorsList[getRandomNumber(0, 2)];
   const firstOperand = getRandomNumber(0, 100);
   const secondOperand = getRandomNumber(0, 100);
   const answer = performCalculation(firstOperand, operator, secondOperand).toString();
