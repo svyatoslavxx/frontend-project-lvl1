@@ -4,8 +4,7 @@ import startGame from '../index.js';
 const taskDescription = 'What number is missing in the progression?';
 
 const generateProgression = (firstNumber, step, progressionLength) => {
-  const numbersForQuestion = [];
-  numbersForQuestion.push(firstNumber + step);
+  const numbersForQuestion = [firstNumber];
 
   for (let i = 1; i < progressionLength + 1; i += 1) {
     numbersForQuestion.push(numbersForQuestion[i - 1] + step);
