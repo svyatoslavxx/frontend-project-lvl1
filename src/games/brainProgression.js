@@ -20,9 +20,8 @@ const generateQuestionAnswerPair = () => {
   const hiddenElementIndex = getRandomNumber(0, progressionLength);
   const progression = generateProgression(firstNumberInProgression, step, progressionLength);
   const correctAnswer = progression[hiddenElementIndex].toString();
-  const question = [...progression];
-  question[hiddenElementIndex] = '..';
-  const questionWithHiddenElement = question.join(' ');
+  progression[hiddenElementIndex] = '..';
+  const questionWithHiddenElement = progression.join(' ');
 
   return [questionWithHiddenElement, correctAnswer];
 };
